@@ -5,3 +5,6 @@
     width: $width;
     height: $height;
 }
+@mixin calcVA($size, $VA) {
+    letter-spacing: calc(($size * $VA)/1000);
+}
