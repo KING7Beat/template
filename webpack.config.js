@@ -128,7 +128,7 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
+                test: /\.(png|jp?g|svg|gif|webp)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -141,8 +141,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
+                // test: /\.(ttf|woff|woff2|eot)$/,
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                          name: '[name].[ext]',
+                          outputPath: 'fonts/'
+                        }
+                    }
+                ]
             },
             {
                 test: /\.xml$/,

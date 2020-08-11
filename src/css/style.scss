@@ -1,10 +1,118 @@
 // Импорты
 @import '~normalize.css';
 @import './vars.scss';
+@import './mixin.scss';
 
 // Общие стили
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
+    font-family: $font-main, Helvetica, sans-serif;
+    font-size: $size-main;
+    box-sizing: border-box !important;
 }
+ul {
+    list-style: $style-ul;
+}
+a {
+    color: $color-link;
+
+    &:hover {
+        color: $color-hover-link;
+        text-decoration: $hover-link;
+    }
+}
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.w {
+    &-sm {
+        &-25 {
+            @media screen and (min-width: 576px) {
+                width: 25% !important;
+            }
+        }
+        &-50 {
+            @media screen and (min-width: 576px) {
+                width: 50% !important;
+            }
+        }
+        &-75 {
+            @media screen and (min-width: 576px) {
+                width: 75% !important;
+            }
+        }
+        &-100 {
+            @media screen and (min-width: 576px) {
+                width: 100% !important;
+            }
+        }
+    }
+    &-md {
+        &-25 {
+            @media screen and (min-width: 768px) {
+                width: 25% !important;
+            }
+        }
+        &-50 {
+            @media screen and (min-width: 768px) {
+                width: 50% !important;
+            }
+        }
+        &-75 {
+            @media screen and (min-width: 768px) {
+                width: 75% !important;
+            }
+        }
+        &-100 {
+            @media screen and (min-width: 768px) {
+                width: 100% !important;
+            }
+        }
+    }
+    &-lg {
+        &-25 {
+            @media screen and (min-width: 992px) {
+                width: 25% !important;
+            }
+        }
+        &-50 {
+            @media screen and (min-width: 992px) {
+                width: 50% !important;
+            }
+        }
+        &-75 {
+            @media screen and (min-width: 992px) {
+                width: 75% !important;
+            }
+        }
+        &-100 {
+            @media screen and (min-width: 992px) {
+                width: 100% !important;
+            }
+        }
+    }
+    &-xl {
+        &-25 {
+            @media screen and (min-width: 1200px) {
+                width: 25% !important;
+            }
+        }
+        &-50 {
+            @media screen and (min-width: 1200px) {
+                width: 50% !important;
+            }
+        }
+        &-75 {
+            @media screen and (min-width: 1200px) {
+                width: 75% !important;
+            }
+        }
+        &-100 {
+            @media screen and (min-width: 1200px) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+// Индивидуальные стили

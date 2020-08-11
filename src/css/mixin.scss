@@ -1,0 +1,7 @@
+@mixin psevdoAfter ($content, $width, $height) {
+    display: block;
+    position: absolute;
+    content: $content;
+    width: $width;
+    height: $height;
+}
